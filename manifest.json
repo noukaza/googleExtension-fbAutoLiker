@@ -1,0 +1,23 @@
+{
+ 
+  "manifest_version": 2,
+  "name": "My App",
+  "version": "1.0",
+  "description": "My 1st App ",
+  "author": "nAmrane",
+  "browser_action":{
+  	"default_title" : "like all photos",
+  	"default_icon":"icon.png",
+    "default_popup":"index.html"
+  },
+  "content_scripts": [
+  	{	
+  		"matches":["https://www.facebook.com/*"],
+  		"js": ["content.js"]
+  	}
+  ],
+  "background":{
+    "scripts" : ["main.js"]
+  }
+
+}
